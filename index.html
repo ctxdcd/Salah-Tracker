@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Salah Tracker</title>
+<meta name="theme-color" content="#f5f5f7">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Salah Tracker">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header class="top">
+    <h1>Salah Tracker</h1>
+    <button id="today" class="pill" type="button">Today</button>
+  </header>
+
+  <nav class="dates" aria-label="Date navigation">
+    <button id="prev" class="chev" type="button" aria-label="Previous day">‹</button>
+    <time id="date" aria-live="polite"></time>
+    <button id="next" class="chev" type="button" aria-label="Next day">›</button>
+  </nav>
+
+  <section class="progress" aria-label="Daily progress">
+    <div class="progress-row">
+      <span id="count">0/5 completed</span>
+      <span id="done" class="done" hidden>All prayers completed</span>
+    </div>
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0"><i id="fill"></i></div>
+  </section>
+
+  <ul id="list" class="list"></ul>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
